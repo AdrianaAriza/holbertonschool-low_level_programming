@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Abecedario
+ * main - Este progrma imprime el Abecedario
  *
  * Return: Always 0 (Success)
  */
