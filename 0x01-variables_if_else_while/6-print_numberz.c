@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main- este programa imprime enteros con put char
  *
@@ -15,4 +16,5 @@ int main(void)
 		n++;
 	}
 	putchar('\n');
+	return (0);
 }
