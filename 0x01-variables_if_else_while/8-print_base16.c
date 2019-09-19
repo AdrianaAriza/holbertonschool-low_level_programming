@@ -11,13 +11,13 @@ int main(void)
 	int a;
 	char c;
 
-	a=0;
+	a = 0;
 	while (a <= 9)
 	{
 		putchar(a + '0');
 		a++;
 	}
-	c='a';
+	c = 'a';
 	while (c < 'g')
 	{
 		putchar(c);
