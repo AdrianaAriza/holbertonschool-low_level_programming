@@ -1,7 +1,9 @@
+
 #include"holberton.h"
 
 /**
  *times_table - prints up to nine table
+ *
  *
  *return: no return
  */
@@ -31,7 +33,7 @@ void times_table(void)
 			}
 			if (c2 != 9)
 			{
-			_putchar(',');
+				_putchar(',');
 			}
 			c2++;
 		}
