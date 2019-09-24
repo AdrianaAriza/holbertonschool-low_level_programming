@@ -2,6 +2,7 @@
 
 /**
 * main - causes an infinite loop
+*@i: number to be processed
 * Return: 0
 */
 
