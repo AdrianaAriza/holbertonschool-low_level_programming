@@ -2,8 +2,8 @@
 
 /**
  *_isalpha - determines if the char is a letter
- *
- *return: 1 is letter 0 otherwise
+ *@c: number to be process
+ *Return: 1 is letter 0 otherwise
  */
 
 int _isalpha(int c)
