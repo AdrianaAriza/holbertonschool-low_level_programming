@@ -1,9 +1,7 @@
-
 #include"holberton.h"
 
 /**
  *times_table - prints up to nine table
- *
  *
  *return: no return
  */
@@ -19,7 +17,11 @@ void times_table(void)
 		while (c2 <= 9)
 		{
 			r = c1 * c2;
-			if (r < 10)
+			if (c2 == 0)
+			{
+				_putchar(r + '0');
+			}
+			else if (r < 10)
 			{
 				_putchar(' ');
 				_putchar(' ');
