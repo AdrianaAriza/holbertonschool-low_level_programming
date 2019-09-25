@@ -17,7 +17,11 @@ int main(void)
 	while (cont < 50)
 	{
 		suma = n1 + n2;
-		printf("%ld, ", suma);
+		printf("%ld", suma);
+		if (cont < 49)
+		{
+			printf(", ");
+		}
 		cont++;
 		n1 = n2;
 		n2 = suma;
