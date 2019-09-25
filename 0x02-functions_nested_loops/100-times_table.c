@@ -18,6 +18,7 @@ void print_times_table(int n)
 				if (c2 == 0)
 				{
 					_putchar(r + '0');
+					_putchar(',');
 				}
 				else if (r < 10)
 					_putchar(' '), _putchar(' '), _putchar(' ');
