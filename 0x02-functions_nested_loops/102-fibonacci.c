@@ -8,13 +8,13 @@
 int main(void)
 {
 	long int n1, n2, suma, cont;
-	
+
 	n1 = 0;
 	n2 = 1;
 	suma = 0;
 	cont = 0;
 
-	while(cont < 50)
+	while (cont < 50)
 	{
 		suma = n1 + n2;
 		printf("%lld, ", suma);
@@ -23,5 +23,4 @@ int main(void)
 		n2 = suma;
 	}
 	printf("\n");
-	
 }
