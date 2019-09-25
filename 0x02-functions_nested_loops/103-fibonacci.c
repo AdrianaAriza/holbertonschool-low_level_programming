@@ -1,6 +1,6 @@
-#include<stdio.h>
+#include <stdio.h>
 /**
- *main - fibonacci
+ *main - fibonacci R
  *
  *Return: 0
  */
@@ -18,7 +18,7 @@ int main(void)
 	while (suma < 4000000)
 	{
 		suma = n1 + n2;
-		if (suma % 2 == 0)
+		if ((suma % 2) == 0)
 		{
 			sumaf = sumaf + suma;
 		}
