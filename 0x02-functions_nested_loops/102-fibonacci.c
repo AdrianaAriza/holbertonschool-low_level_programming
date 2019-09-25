@@ -23,4 +23,5 @@ int main(void)
 		n2 = suma;
 	}
 	printf("\n");
+	return (0);
 }
