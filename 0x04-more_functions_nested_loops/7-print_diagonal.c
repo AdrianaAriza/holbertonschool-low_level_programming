@@ -21,6 +21,9 @@ void print_diagonal(int n)
 			_putchar('\n');
 			cont++;
 		}
+	}
+	else
+	{
 		_putchar('\n');
 	}
 }
