@@ -6,17 +6,23 @@
 */
 int main(void)
 {
-    long int ult = 1, penul = 0, sum = 0, even = 0;
-    for (sum = 0 ; sum < 4000000 ; sum = ult + penul)
-    {
-        if ((sum % 2) == 0)
-        {
-            even = even + sum;
-        }
-        penul = ult;
-        ult = sum;
-    }
-    printf("%ld", even);
-    printf("\n");
-    return (0);
+	int n1, n2;
+	long long int sumaf, suma;
+
+	n1 = 0;
+	n2 = 1;
+	suma = 0;
+	sumaf = 0;
+
+	while (suma < 4000000)
+	{
+		suma = n1 + n2;
+		if (suma % 2 == 0)
+		{
+			sumaf = sumaf + suma;
+		}
+		n1 = n2;
+		n2 = suma;
+	}
+	printf("%lld\n", sumaf);
 }
