@@ -5,7 +5,7 @@
  *Return: void
  */
 
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -29,4 +29,5 @@ void main(void)
 		}
 	}
 	printf("Buzz\n");
+	return(0);
 }
