@@ -7,7 +7,7 @@
 int main(void)
 {
 	int n1, n2;
-	long long int sumaf, suma;
+	long int sumaf, suma;
 
 	n1 = 0;
 	n2 = 1;
@@ -24,5 +24,6 @@ int main(void)
 		n1 = n2;
 		n2 = suma;
 	}
-	printf("%lld\n", sumaf);
+	printf("%ld\n", sumaf);
+	return (0);
 }
