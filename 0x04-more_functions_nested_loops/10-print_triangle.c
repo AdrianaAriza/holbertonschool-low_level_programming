@@ -1,25 +1,27 @@
 #include"holberton.h"
 /**
- * print_line
- *
+ *print_triangle - print triangle#
+ *@size: size of triangle
+ *Return: void
  */
 
-void print_diagonal(int n)
+void print_triangle(int size)
 {
-	int cont = 1;
-	
-	if (n > 0)
+	int i, a, b;
+
+	if (size > 0)
 	{
-		for (int a = 0; a < n; a++)
+		for (i = 1; i <= size; i++)
 		{
-			for (int i = 1; i < cont; i++)
+			for (a = 0; a < (size - i); a++)
 			{
 				_putchar(' ');
 			}
-			_putchar(92);
+			for (b = (size - i); b < size; b++)
+			{
+				_putchar('#');
+			}
 			_putchar('\n');
-			cont++;
 		}
-		_putchar('\n');
 	}
 }
