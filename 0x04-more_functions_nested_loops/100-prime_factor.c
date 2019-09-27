@@ -1,5 +1,9 @@
 #include<stdio.h>
-
+/**
+ *main - calcular
+ *
+ *Return: void
+ */
 
 int main(void)
 {
@@ -22,5 +26,5 @@ int main(void)
 			}
 		}
 	}
-	return(0);
+	return (0);
 }
