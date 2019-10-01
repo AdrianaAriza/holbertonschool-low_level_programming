@@ -29,9 +29,5 @@ int _atoi(char *s)
 	{
 		n = -n;
 	}
-	if (ncont == 1)
-	{
-		n = 0;
-	}
 	return (n);
 }
