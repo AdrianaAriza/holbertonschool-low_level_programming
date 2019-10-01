@@ -8,7 +8,7 @@ int _atoi(char *s)
 {
 	int i = 0, mcont = 0, n = 0, ncont = 1;
 
-	while (s[i] != '\0' && s[i] != ';')
+	while (s[i] != '\0')
 	{
 		if (s[i] == '-')
 		{
@@ -18,9 +18,12 @@ int _atoi(char *s)
 		{
 			n = ((n * ncont) + s[i] - '0');
 			ncont = 10;
+			if (s[i + 1] < '0' || s[i + 1] > '9')
+			{
+				break;
+			}
 		}
 		i++;
-
 	}
 	if (mcont % 2 != 0)
 	{
