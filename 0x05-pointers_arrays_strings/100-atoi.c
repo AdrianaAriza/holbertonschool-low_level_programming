@@ -29,7 +29,7 @@ int _atoi(char *s)
 	{
 		n = -n;
 	}
-	if (ncont == 0)
+	if (ncont == 1)
 	{
 		n = 0;
 	}
