@@ -1,0 +1,21 @@
+/**
+ *_strcat - concat strings
+ *@dest: the 1st and concat string
+ *@src: the 2nd string
+ *Return: dest;
+ */
+char *_strcat(char *dest, char *src)
+{
+	int i = 0, j = 0;
+
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	for (; src[j] != '\0'; j++)
+	{
+		dest[i] = src[j];
+		i++;
+	}
+	return (dest);
+}
