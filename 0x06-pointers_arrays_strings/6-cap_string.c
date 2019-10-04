@@ -12,7 +12,7 @@ char *cap_string(char *s)
 	{
 		if (s[i] >= 'a' && s[i] <= 'z')
 		{
-			for (n = 0; n < 13; n++)
+			for (n = 0; n <= 13; n++)
 			{
 				if (a[n] == s[i - 1])
 				{
