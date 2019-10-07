@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  *_strpbrk - search a string
  *@s: string
@@ -24,7 +25,7 @@ char *_strpbrk(char *s, char *accept)
 		}
 		else
 		{
-			p = "0";
+			p = NULL;
 		}
 		h++;
 	}
