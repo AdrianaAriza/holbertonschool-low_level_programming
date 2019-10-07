@@ -22,6 +22,10 @@ char *_strpbrk(char *s, char *accept)
 			p = (s + h);
 			bandera = 1;
 		}
+		else
+		{
+			p = "0";
+		}
 		h++;
 	}
 	return (p);
