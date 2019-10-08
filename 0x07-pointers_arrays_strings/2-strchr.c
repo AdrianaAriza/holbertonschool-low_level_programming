@@ -8,21 +8,24 @@
 
 char *_strchr(char *s, char c)
 {
-	int i = 1;
+	int i = 0, j = 0, band = 0;
 	char *p;
 
-	while (s[i] != c && s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		i++;
 	}
-	if (s[i] == '\0')
+	for (; j <= i && band != 1; j++)
 	{
-		p = NULL;
-	}
-	else
-	{
-		p = (s + i);
+		if (s[j] == c)
+		{
+			p = (s + i);
+			band = 1;
+		}
+		else
+		{
+			p = NULL;
+		}
 	}
 	return (p);
 }
-
