@@ -19,13 +19,13 @@ char *_strchr(char *s, char c)
 	{
 		if (s[j] == c)
 		{
-			p = (s + i);
+			p = (s + j);
 			band = 1;
 		}
-		else
-		{
-			p = NULL;
-		}
+	}
+	if (band == 0)
+	{
+		p = NULL;
 	}
 	return (p);
 }
