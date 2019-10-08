@@ -5,13 +5,19 @@
  *@needle: string to find
  *Return: p
  */
-
 char *_strstr(char *haystack, char *needle)
 {
-	int i = 0, j = 0, cont = 0;
-	char *p;
+	int i = 0, j = 0, cont = 0, h = 0;
 
-	for (; needle[i] != '\0'; i++)
+	while (needle[h] != '\0')
+	{
+		h++;
+	}
+	if (h == 0)
+	{
+		return (haystack);
+	}
+	for (; needle[i] >= h; i++)
 	{
 		for (; haystack[j] != '\0'; j++)
 		{
@@ -24,14 +30,10 @@ char *_strstr(char *haystack, char *needle)
 				}
 				if (needle[i] == '\0')
 				{
-					p = (haystack + cont);
-				}
-				else
-				{
-					p = NULL;
+					return (haystack + cont);
 				}
 			}
 		}
 	}
-	return (p);
+	return (0);
 }
