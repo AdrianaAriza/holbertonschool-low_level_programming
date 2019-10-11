@@ -6,7 +6,7 @@
  */
 int div(int n, int num)
 {
-	if (n % num != 0 && num <= n / 2)
+	if (n % num != 0 && num == n)
 	{
 		return (div(n, ++num));
 	}
@@ -25,7 +25,11 @@ int is_prime_number(int n)
 {
 	int num = 2;
 
-	if (n < -1 || n > 1)
+	if (n < -1)
+	{
+		return (div(-n, num));
+	}
+	else if (n > 1)
 	{
 		return (div(n, num));
 	}
