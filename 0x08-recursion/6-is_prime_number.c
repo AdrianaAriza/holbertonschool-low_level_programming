@@ -24,14 +24,10 @@ int div(int n, int num)
 int is_prime_number(int n)
 {
 	int num = 2;
-
-	if (n < -1)
+	
+	if (n > 1)
 	{
 		return (div(-n, num));
-	}
-	else if (n > 1)
-	{
-		return (div(n, num));
 	}
 	return (0);
 }
