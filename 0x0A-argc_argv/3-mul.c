@@ -32,6 +32,7 @@ int main(int argc  __attribute__((unused)), char *argv[])
 
 	if (argv[2] == '\0')
 	{
+		printf("Error\n");
 		return (1);
 	}
 	r = stint(argv[1]) * stint(argv[2]);
