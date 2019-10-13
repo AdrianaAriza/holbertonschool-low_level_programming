@@ -35,6 +35,6 @@ int main(int argc  __attribute__((unused)), char *argv[])
 		m = stint(argv[i]);
 		n = n * m;
 	}
-	printf("%d\n", n);
+	printf("%i\n", n);
 	return (0);
 }
