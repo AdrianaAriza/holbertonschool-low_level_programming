@@ -8,9 +8,11 @@
  */
 int main(int argc __attribute__((unused)), char *argv[])
 {
-	int x = 0, cont = 0;
+	int x = 0, cont = 0, i = 0;
 
-	if (argv[2] != '\0' || argv[1] == '\0')
+	for (; argv[i] != '\0'; i++)
+		;
+	if (i != 1)
 	{
 		printf("Error\n");
 		return (1);
