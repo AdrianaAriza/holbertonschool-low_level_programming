@@ -12,7 +12,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 
 	for (; argv[i] != '\0'; i++)
 		;
-	if (i != 1)
+	if ((i - 1) != 1)
 	{
 		printf("Error\n");
 		return (1);
