@@ -28,13 +28,13 @@ int stint (char *n)
  */
 int main(int argc  __attribute__((unused)), char *argv[])
 {
-	int i = 1, m, n = 1;
+	int r = 0;
 
-	for (; argv[i] != '\0'; i++)
+	if (argv[2] == '\0')
 	{
-		m = stint(argv[i]);
-		n = n * m;
+		return (1);
 	}
-	printf("%i\n", n);
+	r = stint(argv[1]) * stint(argv[2]);
+	printf("%i\n", r);
 	return (0);
 }
