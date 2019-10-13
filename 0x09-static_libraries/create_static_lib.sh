@@ -1,1 +1,4 @@
-gcc -c *.c || ar rcs liball.a *.o || ranlib libutil.a 
+#!/bin/bash
+gcc -c *.c
+ar rcs liball.a *.o
+ranlib libutil.a 
