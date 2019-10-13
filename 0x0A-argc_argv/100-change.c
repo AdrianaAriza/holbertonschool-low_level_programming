@@ -8,7 +8,7 @@
  */
 int main(int argc __attribute__((unused)), char *argv[])
 {
-	int x = 0, cont = 0, i = 0;
+	int x = 0, c = 0, i = 0;
 
 	for (; argv[i] != '\0'; i++)
 		;
@@ -24,26 +24,28 @@ int main(int argc __attribute__((unused)), char *argv[])
 	}
 	if (x >= 25)
 	{
-		cont = x / 25;
+		c = c + (x / 25);
 		x = x % 25;
 	}
 	if (x >= 10)
 	{
-		cont = x / 10;
+		c = c + (x / 10);
 		x = x % 10;
 	}
 	if (x >= 5)
 	{
-		cont = x / 5;
+		c = c + (x / 5);
 		x = x % 5;
 	}
 	if (x >= 2)
 	{
-		cont = x / 2;
+		c = c + (x / 2);
 		x = x % 2;
 	}
-	if (x >= 1)
-		++cont;
-	printf("%i\n", cont);
+	if (x == 1)
+	{
+		++c;
+	}
+	printf("%i\n", c);
 	return (0);
 }
