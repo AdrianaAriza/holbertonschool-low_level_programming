@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 	if (x < 0)
 	{
 		printf("0\n");
+		return (0);
 	}
 	if (x >= 25)
 	{
