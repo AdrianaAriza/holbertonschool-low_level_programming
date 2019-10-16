@@ -1,21 +1,20 @@
 #include<stdlib.h>
+#include<stdio.h>
 char *_strdup(char *str)
 {
 	char *p;
-	int i;
+	int i, b;
 
 	if (str == NULL)
 		return (NULL);
-	for (i = 1; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; ++i)
 		;
-	p = malloc(sizeof(*str * i));
+	p = malloc(sizeof(*str) * (i + 1));
 	if (p == NULL)
-	{
 		return (NULL);
-	}
-	for (i = 0; str[i] != '\0'; i++)
+	for (b = 0; b <= i; b++)
 	{
-		p[i] = str[i];
+		p[b] = str[b];
 	}
 	return (p);
 }
