@@ -1,5 +1,10 @@
 #include<stdlib.h>
-#include<stdio.h>
+/**
+ *_strdup - copy a string
+ *@str: string to copy
+ *Return: p
+ */
+
 char *_strdup(char *str)
 {
 	char *p;
