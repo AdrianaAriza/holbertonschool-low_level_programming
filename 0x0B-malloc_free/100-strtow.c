@@ -25,20 +25,19 @@ char **strtow(char *str)
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
-	for (; str[i] != '\0' && cp <= cont; i++)
+	for (; str[i] != '\0'; i++)
 	{
 		if (str[i] != ' ' && str[i + 1] == ' ')
 			cont = cont + 1;
-		if (str[i] != ' ' && str[i] == '\0')
+		if (str[i] != ' ' && str[i + 1] == '\0')
 			cont = cont + 1;
 	}
 	p = malloc(sizeof(char *) * (cont + 1));
 	if (p == NULL)
 		return (NULL);
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0' && cp < cont; i++)
 	{
-		cl = 0;
-		for (; str[i] != ' '; i++)
+		for (; str[i] != ' ' && str[i] != '\0'; i++)
 			cl = cl + 1;
 		if (cl > 0)
 		{
@@ -48,6 +47,7 @@ char **strtow(char *str)
 			fill((str + (i - cl)), p[cp]);
 			cp++;
 		}
+		cl = 0;
 	}
 	p[cp] = NULL;
 	return (p);
