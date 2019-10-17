@@ -23,6 +23,10 @@ char *str_concat(char *s1, char *s2)
 	char *p;
 	int b, n, c = 0;
 
+	if (!s1)
+		s1 = "";
+	if (!s2)
+		s2 = "";
 	n = slen(s1) + slen(s2) + 1;
 
 	p = malloc(sizeof(*p) * n);
@@ -39,3 +43,4 @@ char *str_concat(char *s1, char *s2)
 	}
 	return (p);
 }
+
