@@ -49,6 +49,9 @@ char **strtow(char *str)
 		}
 		cl = 0;
 	}
-	p[cp] = NULL;
+	if (cont == 0)
+		p = NULL;
+	else
+		p[cp] = NULL;
 	return (p);
 }
