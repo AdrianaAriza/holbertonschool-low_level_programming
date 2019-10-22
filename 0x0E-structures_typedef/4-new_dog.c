@@ -40,6 +40,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	owneraux = copy(owner);
 	if (!nameaux || !owneraux)
 	{
+		free(nameaux);
+		free(ownaux);
 		free(dog1);
 		return (NULL);
 	}
