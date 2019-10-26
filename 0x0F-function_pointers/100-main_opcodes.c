@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	char *main_p;
 	int i, size;
 
-	if (ac != 2)
+	if (argc != 2)
 	{
 		puts("Error");
 		exit(1);
