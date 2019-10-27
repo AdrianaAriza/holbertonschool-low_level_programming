@@ -12,8 +12,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list valist;
 	char *aux;
 
-	if (!separator)
-		separator = "";
 	va_start(valist, n);
 	if (n == 0)
 	{
@@ -25,10 +23,20 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		aux = va_arg(valist, char *);
 		if (aux)
-			printf("%s%s", aux, separator);
+		{
+			if (separator)
+				printf("%s%s", aux, separator);
+			else
+				printf("%s", aux);
+		}
 		else
-			printf("%p%s", aux, separator);
+		{
+			if (separator)
+				printf("%p%s", aux, separator);
+			else
+				printf("%s", aux);
+		}
+		printf("%s\n", va_arg(valist, char *));
+		va_end(valist);
 	}
-	printf("%s\n", va_arg(valist, char *));
-	va_end(valist);
 }
