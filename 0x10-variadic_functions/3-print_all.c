@@ -9,7 +9,7 @@ void print_all(const char * const format, ...)
 {
 	int i = 0;
 	va_list valist;
-	char *str, *aux = "";
+	char *str, *aux;
 
 	va_start(valist, format);
 	while (format[i])
@@ -31,9 +31,8 @@ void print_all(const char * const format, ...)
 		case 's':
 			str =  va_arg(valist, char *);
 			if (!str)
-				printf("%p%s", str, aux);
-			else
-				printf("%s%s", str, aux);
+				aux = "(nil)";
+			printf("%s%s", str, aux);
 			break;
 		default:
 			break;
