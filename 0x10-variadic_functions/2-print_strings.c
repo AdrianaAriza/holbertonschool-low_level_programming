@@ -28,6 +28,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 			printf("%s%s", aux, separator);
 	}
-	printf("%s\n", va_arg(valist, char *));
+	aux = va_arg(valist, char *);
+	if (!aux)
+		aux = "(nil)";
+	printf("%s\n", aux);
 	va_end(valist);
 }
