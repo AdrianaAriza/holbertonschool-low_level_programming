@@ -9,7 +9,7 @@ size_t listint_len(const listint_t *h)
 	int cont = 0;
 	listint_t *aux = (void *)h;
 
-	while(aux != NULL)
+	while (aux != NULL)
 	{
 		aux = aux->next;
 		cont++;
