@@ -15,15 +15,24 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (!new)
 		return (NULL);
 	aux = *head;
-	while (i < (idx - 1))
+	if (!idx)
 	{
-		aux = aux->next;
-		i++;
-		if (!aux)
-			return (NULL);
+		new->n = n;
+		new->next = aux->next;
+		*head = new;
 	}
-	new->n = n;
-	new->next = aux->next;
-	aux->next = new;
+	else
+	{
+		while (i < (idx - 1))
+		{
+			aux = aux->next;
+			i++;
+			if (!aux)
+				return (NULL);
+		}
+		new->n = n;
+		new->next = aux->next;
+		aux->next = new;
+	}
 	return (new);
 }
