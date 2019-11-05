@@ -1,3 +1,4 @@
+
 #include"lists.h"
 /**
  *reverse_listint - reverse a list
@@ -10,11 +11,11 @@ listint_t *reverse_listint(listint_t **head)
 
 	while (*head)
 	{
-		a_head = head->next;
-		head->next = aux;
+		a_head = (*head)->next;
+		(*head)->next = aux;
 		aux = *head;
 		*head = a_head;
 	}
-	*head = a_head;
+	*head = aux;
 	return (*head);
 }
