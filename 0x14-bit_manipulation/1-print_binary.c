@@ -6,7 +6,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i = 31, flag = 0, m = 0;
+	int i = 63, flag = 0, m = 0;
 
 	if (n == 0)
 	{
