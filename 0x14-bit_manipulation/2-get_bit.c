@@ -21,9 +21,10 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int x;
 
-	if (inde > 64)
+	if (index > 64)
 		return (-1);
 	x = _pow(index);
 	if ((n & x) == x)
 		return (1);
+	return (0);
 }
