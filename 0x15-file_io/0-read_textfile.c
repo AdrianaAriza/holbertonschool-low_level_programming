@@ -16,7 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	o = open(filename, letters);
 	if (!o)
 		return (0);
-	while (i < letters && r != 0)
+	while (i != letters && r != 0)
 	{
 		r = read(o, &buffer, 1);
 		if (r == -1)
