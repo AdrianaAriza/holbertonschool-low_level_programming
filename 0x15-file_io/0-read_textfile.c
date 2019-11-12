@@ -13,7 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (!filename)
 		return (0);
-	o = open(filename, letters);
+	o = open(filename, 0);
 	if (o == -1)
 		return (0);
 	r = read(o, &buffer, 1);
@@ -21,17 +21,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	while (i < letters && r != 0)
 	{
+		w = write(STDOUT_FILENO, &buffer, 1);
+		if (w == -1)
+			return (0);
 		r = read(o, &buffer, 1);
 		if (r == -1)
 			return (0);
-		if (r)
-		{
-			w = write(1, &buffer, 1);
-			if (w == -1)
-				return (0);
-		}
 		i++;
 	}
+	if (r == 0)
+		i++;
 	r = close(o);
 	if (r == -1)
 		return (0);
