@@ -8,13 +8,16 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	size_t i = 0;
-	int o = 0, w = 0, r = 1;
+	int o = 0, w = 0, r = 0;
 	char *buffer;
 
 	if (!filename)
 		return (0);
 	o = open(filename, letters);
 	if (o == -1)
+		return (0);
+	r = read(o, &buffer, 1);
+	if (r == -1)
 		return (0);
 	while (i < letters && r != 0)
 	{
