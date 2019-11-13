@@ -38,7 +38,7 @@ int main(int ag, char **av)
 	of = open(av[1], O_RDONLY);
 	if (of == -1)
 		exit_98(av[1]);
-	ot = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0661);
+	ot = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (ot == -1)
 		exit_99(av[1]);
 	r = read(of, buffer, 1024);
