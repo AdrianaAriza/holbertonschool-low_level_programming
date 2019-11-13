@@ -16,7 +16,7 @@ void exit_98(char *s)
  */
 void exit_99(char *s)
 {
-	dprintf(STDERR_FILENO, "Error: Can't write fromto %s\n", s);
+	dprintf(STDERR_FILENO, "Error: Can't write from to %s\n", s);
 	exit(99);
 }
 /**
@@ -65,5 +65,5 @@ int main(int ag, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ot);
 		exit(100);
 	}
-	return (1);
+	return (0);
 }
