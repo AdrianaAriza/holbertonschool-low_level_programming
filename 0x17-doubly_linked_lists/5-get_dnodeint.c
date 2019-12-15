@@ -1,6 +1,6 @@
 #include"lists.h"
 /**
- *get_nodeint_at_index - get a node
+ *get_dnodeint_at_index - get a node
  *@head: the header
  *@index: index
  *Return: the node in the index
