@@ -17,7 +17,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	aux = ht->array[idx];
 	while (aux)
 	{
-		if (strcmp(aux, str) == 0)
+		if (strcmp(aux->key, key) == 0)
 		{
 			aux->value = strdup(value);
 			return (1);
