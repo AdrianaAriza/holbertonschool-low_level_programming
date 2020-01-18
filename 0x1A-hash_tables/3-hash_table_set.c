@@ -15,14 +15,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	idx  = key_index((unsigned char *) key, ht->size);
 	aux = ht->array[idx];
-	while (aux)
-	{
-		if (strcmp(aux->key, key) == 0)
-		{
-			aux->value = strdup(value);
-			return (1);
-		}
+	while (aux && strcmp(aux->key, key) != 0)
 		aux = aux->next;
+	if (aux)
+	{
+		aux->value = strdup(value);
+		return (1);
 	}
 	new_node = malloc(sizeof(hash_node_t));
 	if (!new_node)
